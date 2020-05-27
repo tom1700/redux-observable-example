@@ -4,7 +4,6 @@ import { FETCH_BIG_TRADES, STOP_BIG_TRADES_FETCHING, updateBigTrade } from './ac
 
 export const fetchBigTrades = ($actions, $states, deps) => {
     const { tradesSocket$ } = deps;
-
     return $actions.pipe(
         filter(action => [FETCH_BIG_TRADES, STOP_BIG_TRADES_FETCHING].includes(action.type)),
         map(action => {
